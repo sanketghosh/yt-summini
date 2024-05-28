@@ -1,17 +1,17 @@
-import { Novatrix } from "uvcanvas";
-import PromptForm from "./components/prompt-form";
-import SummaryOutput from "./components/summary-output";
+import GenerateForm from "./components/generate-form";
+import GeneratedSummary from "./components/generated-summary";
 import Hero from "./components/hero";
+import Navbar from "./components/navbar";
 
 export default function App() {
   return (
-    <div className="relative h-screen w-screen">
-      <Novatrix />
-      <div className="absolute top-0 flex h-full w-full flex-col items-center justify-center space-y-4 p-4 text-gray-900">
+    <main className="">
+      <Navbar />
+      <div className="mx-auto flex w-full max-w-3xl flex-col px-4 py-3">
         <Hero />
-        <PromptForm />
-        <SummaryOutput />
+        <GenerateForm />
+        <GeneratedSummary />
       </div>
-    </div>
+    </main>
   );
 }
